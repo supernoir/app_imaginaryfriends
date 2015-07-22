@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ScappleDocument Version="1.1" ID="589540F5-2132-4335-B943-6B5637CE884F">
+    <Notes>
+        <Note ID="0" FontSize="30.0" Position="205.935746,20.0" Width="302.0">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <TextColor>0.5 0.0 0.5</TextColor>
+                <Border Weight="1" Style="Cloud">0.747881 0.366532 0.542813</Border>
+            </Appearance>
+            <String>Imaginary Friends
+Character Creation App for Novelists</String>
+            <Formatting>
+                <FormatRange Bold="Yes">0,18</FormatRange>
+            </Formatting>
+        </Note>
+        <Note ID="1" FontSize="19.5" Position="129.138871,297.395089" Width="179.0">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Border Weight="5" Style="Square">0.791142 0.791142 0.791142</Border>
+                <Fill>0.791142 0.791142 0.791142</Fill>
+            </Appearance>
+            <String>Add New Character</String>
+            <ConnectedNoteIDs>7-9, 11, 13</ConnectedNoteIDs>
+        </Note>
+        <Note ID="3" FontSize="19.5" Position="415.5,180.0" Width="192.0">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Border Weight="5">0.531484 0.869336 0.999151</Border>
+                <Fill>0.531484 0.869336 0.999151</Fill>
+            </Appearance>
+            <String>Character Overview
+index.erb</String>
+            <ConnectedNoteIDs>12-13</ConnectedNoteIDs>
+            <Formatting>
+                <FormatRange Bold="Yes">0,19</FormatRange>
+            </Formatting>
+        </Note>
+        <Note ID="5" FontSize="12.0" Position="56.86655,497.876116" Width="92.0">
+            <Appearance>
+                <Alignment>Center</Alignment>
+            </Appearance>
+            <String>Add First Name</String>
+            <ConnectedNoteIDs>11</ConnectedNoteIDs>
+        </Note>
+        <Note ID="6" FontSize="12.0" Position="159.520886,505.404177" Width="95.0">
+            <Appearance>
+                <Alignment>Center</Alignment>
+            </Appearance>
+            <String>Add Last Name </String>
+            <ConnectedNoteIDs>11</ConnectedNoteIDs>
+        </Note>
+        <Note ID="7" FontSize="12.0" Position="20.0,337.03412" Width="73.0">
+            <Appearance>
+                <Alignment>Center</Alignment>
+            </Appearance>
+            <String>Add Gender</String>
+            <ConnectedNoteIDs>1</ConnectedNoteIDs>
+        </Note>
+        <Note ID="8" FontSize="12.0" Position="73.93176,373.268335" Width="65.0">
+            <Appearance>
+                <Alignment>Center</Alignment>
+            </Appearance>
+            <String>Add Origin</String>
+            <ConnectedNoteIDs>1</ConnectedNoteIDs>
+        </Note>
+        <Note ID="9" FontSize="12.0" Position="282.953763,402.7728" Width="74.0">
+            <Appearance>
+                <Alignment>Center</Alignment>
+            </Appearance>
+            <String>Add Picture </String>
+            <ConnectedNoteIDs>1</ConnectedNoteIDs>
+        </Note>
+        <Note ID="10" FontSize="12.0" Position="217.4772,480.861767" Width="89.0">
+            <Appearance>
+                <Alignment>Center</Alignment>
+            </Appearance>
+            <String>Random Name</String>
+            <ConnectedNoteIDs>11</ConnectedNoteIDs>
+        </Note>
+        <Note ID="11" FontSize="12.0" Position="180.497608,362.216996" Width="69.0">
+            <Appearance>
+                <Alignment>Center</Alignment>
+            </Appearance>
+            <String>Add Name </String>
+            <ConnectedNoteIDs>1, 5-6, 10</ConnectedNoteIDs>
+        </Note>
+        <Note ID="12" FontSize="12.0" Position="342.748246,333.053571" Width="197.0">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <TextColor>1.0 0.0 0.0</TextColor>
+            </Appearance>
+            <String>CHARACTER DATABASE (JSON)</String>
+            <ConnectedNoteIDs>3, 13</ConnectedNoteIDs>
+            <Formatting>
+                <FormatRange Bold="Yes">0,25</FormatRange>
+            </Formatting>
+        </Note>
+        <Note ID="13" FontSize="19.5" Position="116.0,199.896684" Width="200.0">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Border Weight="5">0.531484 0.869336 0.999151</Border>
+                <Fill>0.531484 0.869336 0.999151</Fill>
+            </Appearance>
+            <String>Add New Character new_character.erb</String>
+            <ConnectedNoteIDs>1, 3, 12</ConnectedNoteIDs>
+            <Formatting>
+                <FormatRange Bold="Yes">0,17</FormatRange>
+            </Formatting>
+        </Note>
+    </Notes>
+    <BackgroundShapes></BackgroundShapes>
+    <AutoFit>1, 3, 5-12</AutoFit>
+    <NoteStyles>
+        <Style Name="Title Text" ID="7AED3901-B2E6-4475-B34C-0939E936A8F9" AffectFontStyle="Yes" AffectAlignment="Yes" AffectTextColor="No" AffectNoteBody="No" AffectFade="No">
+            <FontSize>28.0</FontSize>
+            <IsBold>Yes</IsBold>
+        </Style>
+        <Style Name="Red Text" ID="5DF788E4-8151-4ECA-9BBA-D3685FD94E0E" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="Yes" AffectNoteBody="No" AffectFade="No">
+            <TextColor>1.0 0.0 0.0</TextColor>
+        </Style>
+        <Style Name="Brown Bubble" ID="D7A3FC74-96DD-4169-BC20-599E4050DBBA" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.290055 0.1523 0.182215</BorderColor>
+            <FillColor>0.940019 0.892907 0.779716</FillColor>
+        </Style>
+        <Style Name="Yellow Bubble" ID="70B7B09C-8897-40ED-9C9E-624AE668EB22" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.756763 0.785592 0.373258</BorderColor>
+            <FillColor>0.906773 0.910625 0.634363</FillColor>
+        </Style>
+        <Style Name="Green Bubble" ID="B9CCE909-597C-48A7-B760-3DAE7EA6415A" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.331867 0.609932 0.356197</BorderColor>
+            <FillColor>0.790123 0.882327 0.80198</FillColor>
+        </Style>
+        <Style Name="Blue Bubble" ID="A2BD962D-B9C6-4128-889F-452DCB845DA2" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.477193 0.557066 0.76433</BorderColor>
+            <FillColor>0.840969 0.866828 0.925903</FillColor>
+        </Style>
+        <Style Name="Pink Bubble" ID="F5567F42-BD88-49E4-AF57-738930684183" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.747881 0.366532 0.542813</BorderColor>
+            <FillColor>0.918452 0.807302 0.863467</FillColor>
+        </Style>
+    </NoteStyles>
+    <UISettings>
+        <BackgroundColor>0.999737 0.986332 0.931298</BackgroundColor>
+        <DefaultFont>Helvetica</DefaultFont>
+        <DefaultTextColor>0.0 0.0 0.0</DefaultTextColor>
+    </UISettings>
+    <PrintSettings PaperSize="595.0,842.0" LeftMargin="72.0" RightMargin="72.0" TopMargin="90.0" BottomMargin="90.0" PaperType="iso-a4" Orientation="Portrait" HorizontalPagination="Clip" VerticalPagination="Auto" ScaleFactor="1.0" HorizontallyCentered="Yes" VerticallyCentered="Yes" Collates="Yes" PagesAcross="1" PagesDown="1"></PrintSettings>
+</ScappleDocument>

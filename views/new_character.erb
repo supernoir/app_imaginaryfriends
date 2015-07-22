@@ -1,0 +1,32 @@
+    <p>Enter a new character</p>
+
+      <ul class='unstyled'>
+        <li>
+          <form action="/create_character" method="POST">
+
+          First Name:<br>
+          <input type="text" name="first_name"><br>
+
+          Last Name:<br>
+          <input type="text" name="last_name"><br>
+
+          Age:<br>
+          <input type="text" name="age"><br>
+
+          Origin:<br>
+          <input type="text" name="origin"><br>
+
+          <br><br>
+          <button type='submit' class='btn btn-primary'>Create New Character</button>
+          </form>
+
+        </li>
+
+      </ul>
+<h3>You just entered a new character:</h3>
+<p>First name: <%= @newfirstname %></p>
+<p>Last name: <%= @newlastname %></p>
+<p>Age: <%= @newage %></p>
+<p>Origin: <%= @neworigin %></p>
+  </body>
+</html>
