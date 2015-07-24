@@ -15,11 +15,6 @@ get '/new_character' do
   erb :new_character
 end
 
-get '/my_characters' do
-  @title = 'My Characters'
-  erb :my_characters
-end
-
 post '/create_character' do
   $first_name = params[:first_name]
   $last_name = params[:last_name]
@@ -42,18 +37,26 @@ def assemble_characters
   write_character($character)
 end
 
+
+
+
 # Read the JSON File and parse it into a hash
-def read_characters()
+def read_characters(my_characters)
   readfile = File.read("characters.json")
   return JSON.parse(readfile)
 end
 
 # Reads the Characters JSON file and appends the new character
 def write_character(character)
-
   characters = read_characters()
   characters << $character
   f = File.open("characters.json", "w")
   f << characters.to_json
   f.close
+end
+
+get '/my_characters' do
+ @title = 'My Characters'
+  @characterlist = 'So where is my stuff now'
+  erb :my_characters
 end

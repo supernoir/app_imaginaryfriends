@@ -1,11 +1,13 @@
 <div class="container">
+
   <div class="panel panel-default">
     <div class="panel-heading">
-      <h3 class="panel-title">My Characters</h3>
+      <h3 class="panel-title"><%= @title %></h3>
     </div>
   <div class="panel-body">
+    <p>See if this works: <%= @characterlist %></p>
 
-    <table class='table table-hover table-striped'>
+    <table@characterlist class='table table-hover table-striped'>
       <h3>You just entered a new character:</h3>
       <p>First name: <%= @newfirstname %></p>
       <p>Last name: <%= @newlastname %></p>
