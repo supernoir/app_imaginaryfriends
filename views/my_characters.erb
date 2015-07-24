@@ -1,19 +1,33 @@
 <div class="container">
 
+<div class="alert alert-success" role="alert">
+  <span class="glyphicon glyphicon-ok" aria-hidden="true">
+  </span>&emsp;<%= @latest_addition %>
+</div>
+
   <div class="panel panel-default">
     <div class="panel-heading">
       <h3 class="panel-title"><%= @title %></h3>
     </div>
   <div class="panel-body">
-    <p>See if this works: <%= @characterlist %></p>
-
-    <table@characterlist class='table table-hover table-striped'>
-      <h3>You just entered a new character:</h3>
-      <p>First name: <%= @newfirstname %></p>
-      <p>Last name: <%= @newlastname %></p>
-      <p>Birthday: <%= @newage %></p>
-      <p>Origin: <%= @neworigin %></p>
-    </table>
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <td><strong>First Name</strong></td>
+        <td><strong>Last Name</strong></td>
+        <td><strong>Birthday</strong></td>
+        <td><strong>Origin</strong></td>
+      </tr>
+    </thead>
+  <% @characterlist.each do |character|  %>
+    <tr>
+      <td><%= character['First Name'] %></td>
+      <td><%= character['Last Name'] %></td>
+      <td><%= character['Age'] %></td>
+      <td><%= character['Origin'] %></td>
+    </tr>
+  <% end %>
+</table>
 
   </div>
   </div>
