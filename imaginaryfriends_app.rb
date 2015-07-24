@@ -15,6 +15,11 @@ get '/new_character' do
   erb :new_character
 end
 
+get '/my_characters' do
+  @title = 'My Characters'
+  erb :my_characters
+end
+
 post '/create_character' do
   $first_name = params[:first_name]
   $last_name = params[:last_name]

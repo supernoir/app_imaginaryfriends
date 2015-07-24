@@ -7,27 +7,31 @@
 
     <form action="/create_character" method="POST">
 
-    First Name:<br>
-    <input type="text" name="first_name"><br>
+      <div class="form-group">
+        <label for="inputfirstname">First Name</label>
+        <input type="text" name="first_name" class="form-control" id="inputfirstname" placeholder="e.g. Harry">
+      </div>
 
-    Last Name:<br>
-    <input type="text" name="last_name"><br>
+      <div class="form-group">
+        <label for="inputlastname">Last Name</label>
+        <input type="text" name="last_name" class="form-control" id="inputlastname" placeholder="e.g. Potter">
+      </div>
 
-    Age:<br>
-    <input type="text" name="age"><br>
+      <div class="form-group">
+        <label for="inputage">Birthday</label>
+        <input type="text" name="age" class="form-control" id="inputage" placeholder="e.g. 31 July 1980">
+      </div>
 
-    Origin:<br>
-    <input type="text" name="origin"><br>
+      <div class="form-group">
+        <label for="inputorigin">Origin</label>
+        <input type="text" name="origin" class="form-control" id="inputorigin" placeholder="e.g. Godric's Hollow">
+      </div>
 
     <br><br>
     <button type='submit' class='btn btn-primary'>Create New Character</button>
     </form>
 
-    <h3>You just entered a new character:</h3>
-    <p>First name: <%= @newfirstname %></p>
-    <p>Last name: <%= @newlastname %></p>
-    <p>Age: <%= @newage %></p>
-    <p>Origin: <%= @neworigin %></p>
+
 
 
   </div>
