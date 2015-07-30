@@ -3,6 +3,7 @@
 require 'sinatra'
 require 'json'
 require 'yaml/store'
+require 'rubygems'
 
 
 get '/' do
@@ -57,4 +58,17 @@ get '/my_characters' do
   @latest_addition = 'You successfully created a new character. Awesome!'
   @characterlist = read_characters()
   erb :my_characters
+end
+
+# Image Uploader
+
+get "/upload" do
+  erb :upload
+end
+
+post "/upload" do
+  File.open('uploads/' + params['upload-img'][:filename], "w") do |f|
+    f.write(params['upload-img'][:tempfile].read)
+  end
+  return "The file was successfully uploaded!"
 end
