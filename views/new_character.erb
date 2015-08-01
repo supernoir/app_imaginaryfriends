@@ -1,11 +1,12 @@
 <div class="container">
+
 <div class="panel panel-default">
   <div class="panel-heading">
     <h3 class="panel-title">Create new Character</h3>
   </div>
   <div class="panel-body">
 
-    <form action="/create_character" method="POST">
+    <form action="/create_character" method="POST" enctype="multipart/form-data">
 
       <div class="form-group">
         <label for="inputfirstname">First Name</label>
@@ -27,17 +28,16 @@
         <input type="text" name="origin" class="form-control" id="inputorigin" placeholder="e.g. Godric's Hollow">
       </div>
 
+
+        <div class="form-group">
+          <label for="characterimg">Choose a file</label>
+          <input type="file" name="image" class="form-control" id="characterimg" placeholder="quidditch.jpg">
+        </div>
+
     <br><br>
     <button type='submit' class='btn btn-primary'>Create New Character</button>
     </form>
 
-    <table class='table table-hover table-striped'>
-      <h3>You just entered a new character:</h3>
-      <p>First name: <%= @newfirstname %></p>
-      <p>Last name: <%= @newlastname %></p>
-      <p>Birthday: <%= @newage %></p>
-      <p>Origin: <%= @neworigin %></p>
-    </table>
 
 
 

@@ -1,10 +1,16 @@
-# The Suffragist
+# Imaginary Friends
 
+## REQUIRE - General
 require 'sinatra'
 require 'json'
 require 'yaml/store'
 require 'rubygems'
 
+## Require - App Modules
+require './character'
+
+## File Structure
+set :public_folder, 'public'
 
 get '/' do
   @title = 'Imaginary Friends App'
@@ -17,58 +23,39 @@ get '/new_character' do
 end
 
 post '/create_character' do
+
+  File.open('public/images/' + params['image'][:filename], "w") do |f|
+      f.write(params['image'][:tempfile].read)
+    end
+
+
   $first_name = params[:first_name]
   $last_name = params[:last_name]
   $age = params[:age]
   $origin = params[:origin]
+  $image = params[:image][:filename]
 
   @newfirstname = $first_name
   @newlastname = $last_name
   @newage = $age
   @neworigin = $origin
+  @image = $image
+
+
 
   assemble_characters
 
+
+
   erb :new_character
+  redirect :my_characters
 end
 
-# Assembles a single character with the data supplied by the user
-def assemble_characters ()
-  $character = {"First Name" => $first_name, "Last Name" => $last_name, "Age" => $age, "Origin" => $origin}
-  write_character($character)
-end
-
-# Read the JSON File and parse it into a hash
-def read_characters()
-  readfile = File.read("characters.json")
-  return JSON.parse(readfile)
-end
-
-# Reads the Characters JSON file and appends the new character
-def write_character(character)
-  characters = read_characters()
-  characters << $character
-  f = File.open("characters.json", "w")
-  f << characters.to_json
-  f.close
-end
+#CHARACTER.RB
 
 get '/my_characters' do
   @title = 'My Characters'
-  @latest_addition = 'You successfully created a new character. Awesome!'
+  #@latest_addition = 'You successfully added <strong>' + $first_name + '</strong> to your list. Awesome!'
   @characterlist = read_characters()
   erb :my_characters
-end
-
-# Image Uploader
-
-get "/upload" do
-  erb :upload
-end
-
-post "/upload" do
-  File.open('uploads/' + params['upload-img'][:filename], "w") do |f|
-    f.write(params['upload-img'][:tempfile].read)
-  end
-  return "The file was successfully uploaded!"
 end

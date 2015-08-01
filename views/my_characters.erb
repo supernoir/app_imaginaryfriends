@@ -1,9 +1,9 @@
 <div class="container">
 
-<div class="alert alert-success" role="alert">
+<!--<div class="alert alert-info" role="alert">
   <span class="glyphicon glyphicon-ok" aria-hidden="true">
   </span>&emsp;<%= @latest_addition %>
-</div>
+</div>-->
 
   <div class="panel panel-default">
     <div class="panel-heading">
@@ -13,6 +13,7 @@
     <table class="table table-striped">
       <thead>
       <tr>
+        <td><strong>Image</strong></td>
         <td><strong>First Name</strong></td>
         <td><strong>Last Name</strong></td>
         <td><strong>Birthday</strong></td>
@@ -21,6 +22,7 @@
     </thead>
   <% @characterlist.each do |character|  %>
     <tr>
+      <td><img src="/images/<%= character['Image'] %>" height="140" class="img-rounded"></td>      
       <td><%= character['First Name'] %></td>
       <td><%= character['Last Name'] %></td>
       <td><%= character['Age'] %></td>
