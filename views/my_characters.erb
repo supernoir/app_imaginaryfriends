@@ -1,9 +1,6 @@
 <div class="container">
 
-<!--<div class="alert alert-info" role="alert">
-  <span class="glyphicon glyphicon-ok" aria-hidden="true">
-  </span>&emsp;<%= @latest_addition %>
-</div>-->
+
 
   <div class="panel panel-default">
     <div class="panel-heading">
@@ -22,7 +19,8 @@
     </thead>
   <% @characterlist.each do |character|  %>
     <tr>
-      <td><img src="/images/<%= character['Image'] %>" height="140" class="img-rounded"></td>      
+      <td><img src="/images/<%= character['Image'] %>" height="140" class="img-rounded"></td>
+      <td><%= character['Character ID'] %></td>
       <td><%= character['First Name'] %></td>
       <td><%= character['Last Name'] %></td>
       <td><%= character['Age'] %></td>

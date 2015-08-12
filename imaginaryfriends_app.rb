@@ -1,5 +1,6 @@
 # Imaginary Friends
 
+
 ## REQUIRE - General
 require 'sinatra'
 require 'json'
@@ -57,5 +58,6 @@ get '/my_characters' do
   @title = 'My Characters'
   #@latest_addition = 'You successfully added <strong>' + $first_name + '</strong> to your list. Awesome!'
   @characterlist = read_characters()
+  @characterid = $characterid
   erb :my_characters
 end
