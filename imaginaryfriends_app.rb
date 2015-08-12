@@ -7,6 +7,7 @@ require 'json'
 require 'yaml/store'
 require 'rubygems'
 
+
 ## Require - App Modules
 require './character'
 
@@ -42,11 +43,7 @@ post '/create_character' do
   @neworigin = $origin
   @image = $image
 
-
-
   assemble_characters
-
-
 
   erb :new_character
   redirect :my_characters
@@ -56,8 +53,6 @@ end
 
 get '/my_characters' do
   @title = 'My Characters'
-  #@latest_addition = 'You successfully added <strong>' + $first_name + '</strong> to your list. Awesome!'
   @characterlist = read_characters()
-  @characterid = $characterid
   erb :my_characters
 end

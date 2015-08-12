@@ -1,0 +1,3 @@
+2. Would it be a good idea to create a new branch in my git when switching from JSON, which works perfectly, to MongoDB?
+3. Do you have any best practises on how to quickly test out features without having to run and rerun the app all the time?
+4. Should I create a separate file for the "views"?

@@ -2,7 +2,6 @@
 
 # Assembles a single character with the data supplied by the user
 def assemble_characters ()
-  # generate uuid
   $characterid = SecureRandom.uuid
   $character = {"Character ID" => $characterid, "First Name" => $first_name, "Last Name" => $last_name, "Age" => $age, "Origin" => $origin, "Image" => $image}
   write_character($character)
