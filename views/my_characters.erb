@@ -1,5 +1,15 @@
-<div class="container">
+<!--
+<% @characterlist.each do |character|  %>
+  <div class="col-md-4">
+    <img src="/images/<%= character['Image'] %>" width="100" class="img-thumbnail">
+    <div class="panel panel-default">
+    <h2><%= character['First Name'] %></h2>
+    </div>
+  </div>
+<% end %>
+-->
 
+<div class="container">
 
 
   <div class="panel panel-default">
@@ -11,6 +21,7 @@
       <thead>
       <tr>
         <td><strong>Image</strong></td>
+        <td><strong>User ID</strong></td>
         <td><strong>First Name</strong></td>
         <td><strong>Last Name</strong></td>
         <td><strong>Birthday</strong></td>
@@ -20,7 +31,7 @@
   <% @characterlist.each do |character|  %>
     <tr>
       <td><img src="/images/<%= character['Image'] %>" height="140" class="img-rounded"></td>
-      <td><%= character['Character ID'] %></td>
+      <td class="small"><code><%= character['Character ID'] %></code></td>
       <td><%= character['First Name'] %></td>
       <td><%= character['Last Name'] %></td>
       <td><%= character['Age'] %></td>

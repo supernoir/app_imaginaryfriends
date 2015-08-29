@@ -1,11 +1,9 @@
 # Imaginary Friends
 
-
 ## REQUIRE - General
 require 'sinatra'
 require 'json'
 require 'yaml/store'
-require 'rubygems'
 
 
 ## Require - App Modules
@@ -31,17 +29,17 @@ post '/create_character' do
     end
 
 
-  $first_name = params[:first_name]
-  $last_name = params[:last_name]
-  $age = params[:age]
-  $origin = params[:origin]
-  $image = params[:image][:filename]
+  first_name = params[:first_name]
+  last_name = params[:last_name]
+  age = params[:age]
+  origin = params[:origin]
+  image = params[:image][:filename]
 
-  @newfirstname = $first_name
-  @newlastname = $last_name
-  @newage = $age
-  @neworigin = $origin
-  @image = $image
+  @newfirstname = first_name
+  @newlastname = last_name
+  @newage = age
+  @neworigin = origin
+  @image = image
 
   assemble_characters
 
