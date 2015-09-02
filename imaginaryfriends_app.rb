@@ -1,13 +1,14 @@
 # Imaginary Friends
 
-## REQUIRE - General
+## General
 require 'sinatra'
 require 'json'
 require 'yaml/store'
 
 
-## Require - App Modules
-require './character'
+## App Modules
+# require './character'
+require './db'
 
 ## File Structure
 set :public_folder, 'public'
@@ -28,20 +29,14 @@ post '/create_character' do
       f.write(params['image'][:tempfile].read)
     end
 
-
   first_name = params[:first_name]
   last_name = params[:last_name]
   age = params[:age]
   origin = params[:origin]
   image = params[:image][:filename]
 
-  @newfirstname = first_name
-  @newlastname = last_name
-  @newage = age
-  @neworigin = origin
-  @image = image
+  Character.create!(first_name: first_name, last_name: last_name, age: age, origin: origin, image: image )
 
-  assemble_characters
 
   erb :new_character
   redirect :my_characters
@@ -51,6 +46,6 @@ end
 
 get '/my_characters' do
   @title = 'My Characters'
-  @characterlist = read_characters()
+  @characterlist = Character.all
   erb :my_characters
 end

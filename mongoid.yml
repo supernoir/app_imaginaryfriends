@@ -3,4 +3,4 @@ clients:
 default:
 database: mongoid
 hosts:
-- localhost:27017'mongodb://localhost:27017/test'
+- localhost:27017'mongodb://localhost:27017/library'
