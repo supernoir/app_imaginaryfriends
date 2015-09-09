@@ -18,11 +18,11 @@ class Character
   field :last_name, type: String
   field :age, type: String
   field :origin, type: String
-  field :image, type: String
+#  field :image, type: String
   store_in collection: "characters", database: "library"
 end
 
-Character.create!(first_name: 'Conny', last_name: 'Kawohl', origin: 'Bremen')
-puts Character.last.inspect
-p = Character.last
-puts p.first_name
+#Character.create!(first_name: 'Conny', last_name: 'Kawohl', origin: 'Bremen')
+#puts Character.last.inspect
+#p = Character.last
+#puts p.first_name

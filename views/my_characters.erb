@@ -8,8 +8,7 @@
     <table class="table table-striped">
       <thead>
       <tr>
-        <td><strong>Image</strong></td>
-        <td><strong>User ID</strong></td>
+<!--        <td><strong>Image</strong></td>-->
         <td><strong>First Name</strong></td>
         <td><strong>Last Name</strong></td>
         <td><strong>Birthday</strong></td>
@@ -18,12 +17,11 @@
     </thead>
   <% @characterlist.each do |character|  %>
     <tr>
-      <td><img src="/images/<%= character['Image'] %>" height="140" class="img-rounded"></td>
-      <td class="small"><code><%= character['Character ID'] %></code></td>
-      <td><%= character['First Name'] %></td>
-      <td><%= character['Last Name'] %></td>
-      <td><%= character['Age'] %></td>
-      <td><%= character['Origin'] %></td>
+<!--      <td><img src="/images/<%= character['Image'] %>" height="140" class="img-rounded"></td>-->
+      <td><%= character.first_name %></td>
+      <td><%= character.last_name %></td>
+      <td><%= character.age %></td>
+      <td><%= character.origin %></td>
     </tr>
   <% end %>
 </table>
