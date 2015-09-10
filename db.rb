@@ -1,8 +1,6 @@
 # REQUIRE
 require 'mongoid'
-
-# client = Mongo::Client.new([ 'localhost:27017' ], :database => 'library')
-# artists = client[:artists]
+#require 'mongoid/grid_fs'
 
 Mongoid.configure do |config|
   config.sessions = {
@@ -11,6 +9,7 @@ Mongoid.configure do |config|
     }
   }
 end
+
 
 class Character
   include Mongoid::Document
@@ -21,8 +20,3 @@ class Character
 #  field :image, type: String
   store_in collection: "characters", database: "library"
 end
-
-#Character.create!(first_name: 'Conny', last_name: 'Kawohl', origin: 'Bremen')
-#puts Character.last.inspect
-#p = Character.last
-#puts p.first_name
