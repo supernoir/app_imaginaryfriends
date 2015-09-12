@@ -8,13 +8,11 @@ require 'yaml/store'
 
 ## MODULES
 require './db'
-#require './name_randomizer'
 
 ## File Structure
 set :public_folder, 'public'
 
 ## RANDOMIZER
-
 # Change class Array to include method random_element
 class Array
   def random_element
@@ -53,14 +51,16 @@ end
 
 post '/create_character' do
 
+  gender = params[:gender]
   first_name = params[:first_name]
   last_name = params[:last_name]
   age = params[:age]
   origin = params[:origin]
-#  image = params[:file][:filename]
+  image = params[:image]
+  image_name = params[:image_name]
 
 
-  Character.create!(first_name: first_name, last_name: last_name, age: age, origin: origin)
+  Character.create!(first_name: first_name, last_name: last_name, age: age, origin: origin, image: image, image_name: image_name)
 
   erb :new_character
   redirect :my_characters
@@ -76,7 +76,6 @@ get '/view_character/:id' do |id|
   character_by_id = params[:id].tr(":","")
   @display_character = Character.or({id: character_by_id})
   @title = 'Viewing ' + character_by_id
-
   erb :view_character
 end
 

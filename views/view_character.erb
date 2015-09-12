@@ -1,30 +1,19 @@
 
 <div class="container">
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h3 class="panel-title"><%= @title %></h3>
+    <% @display_character.each do |character|  %>
+
+    <div class="panel panel-default">
+      <div class="panel-heading"><p class="text-center"><h3><%= character.first_name %> <strong><%= character.last_name %></strong></h3></p></div>
+      <div class="panel-body">
+        <img src="/images/<%= character.image_name %>" height="140" class="img-rounded">
+      </div>
+      <ul class="list-group">
+        <li class="list-group-item"><strong>Origin:</strong> <%= character.origin %></li>
+        <li class="list-group-item"><strong>Birthday:</strong> <%= character.age %></li>
+      </ul>
     </div>
-  <div class="panel-body">
-    <table class="table table-striped">
-      <thead>
-      <tr>
-<!--        <td><strong>Image</strong></td>-->
-        <td><strong>First Name</strong></td>
-        <td><strong>Last Name</strong></td>
-        <td><strong>Birthday</strong></td>
-        <td><strong>Origin</strong></td>
-      </tr>
-    </thead>
-  <% @display_character.each do |character|  %>
-    <tr>
-<!--      <td><img src="/images/<%= character['Image'] %>" height="140" class="img-rounded"></td>-->
-      <td><%= character.first_name %></td>
-      <td><%= character.last_name %></td>
-      <td><%= character.age %></td>
-      <td><%= character.origin %></td>
-    </tr>
+
   <% end %>
-</table>
 
   </div>
   </div>
