@@ -14,16 +14,18 @@
         <td><strong>Birthday</strong></td>
         <td><strong>Origin</strong></td>
       </tr>
-    </thead>
-  <% @display_character.each do |character|  %>
-    <tr>
-<!--      <td><img src="/images/<%= character['Image'] %>" height="140" class="img-rounded"></td>-->
-      <td><%= character.first_name %></td>
-      <td><%= character.last_name %></td>
-      <td><%= character.age %></td>
-      <td><%= character.origin %></td>
-    </tr>
-  <% end %>
+      </thead>
+      <% @display_character.each do |character|  %>
+      <tr>
+      <!--      <td><img src="/images/<%= character['Image'] %>" height="140" class="img-rounded"></td>-->
+            <td><%= character.first_name %></td>
+            <td><%= character.last_name %></td>
+            <td><%= character.age %></td>
+            <td><%= character.origin %></td>
+          </tr>
+        <% end %>
+
+
 </table>
 
   </div>

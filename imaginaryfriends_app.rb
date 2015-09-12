@@ -72,9 +72,11 @@ get '/my_characters' do
   erb :my_characters
 end
 
-get '/view_character' do
-  @title = 'Viewing #Name'
-  @characterlist = Character.all
+get '/view_character/:id' do |id|
+  character_by_id = params[:id].tr(":","")
+  @display_character = Character.or({id: character_by_id})
+  @title = 'Viewing ' + character_by_id
+
   erb :view_character
 end
 
