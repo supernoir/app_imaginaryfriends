@@ -1,0 +1,7 @@
+## THOUGHTS ON CHARACTER VIEW 
+
+- I want the user to be able to view a single character from out of the my_character list.
+- User clicks on button "view"
+- User is directed to the erb "view_character"
+- Depending on where the user clicked in the character list, that single character will be displayed to her.
+- Single character view is also the mode for editing, whereas editing opens the character with a form and the current content of the character Object.

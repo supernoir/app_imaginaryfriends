@@ -13,7 +13,7 @@ require './db'
 ## File Structure
 set :public_folder, 'public'
 
-# RANDOMIZER
+## RANDOMIZER
 
 # Change class Array to include method random_element
 class Array
@@ -21,7 +21,6 @@ class Array
     self[rand(length)]
   end
 end
-
 
 ## FIRST NAMES
 # This should eventually read from db or json
@@ -71,6 +70,17 @@ get '/my_characters' do
   @title = 'My Characters'
   @characterlist = Character.all
   erb :my_characters
+end
+
+get '/view_character' do
+  @title = 'Viewing #Name'
+  @characterlist = Character.all
+  erb :view_character
+end
+
+get '/edit_character' do
+  @title = 'Editing #Name'
+  erb :edit_character
 end
 
 get '/find_character' do
