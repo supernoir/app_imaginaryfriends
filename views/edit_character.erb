@@ -6,26 +6,25 @@
   </div>
   <div class="panel-body">
 
-    <form action="/create_character" method="POST" enctype="multipart/form-data">
-
+    <form action="/modify_character/<%= @this_character %>" method="POST" enctype="multipart/form-data">
       <div class="form-group">
         <label for="inputfirstname">First Name</label>
-        <input type="text" name="first_name" class="form-control" id="inputfirstname" placeholder="<%= @sample_first_name_male %>">
+        <input type="text" name="first_name" class="form-control" id="inputfirstname" value="<%= @current_firstname %>">
       </div>
 
       <div class="form-group">
         <label for="inputlastname">Last Name</label>
-        <input type="text" name="last_name" class="form-control" id="inputlastname" placeholder="<%= @sample_last_name %>">
+        <input type="text" name="last_name" class="form-control" id="inputlastname" value="<%= @current_lastname %>">
       </div>
 
       <div class="form-group">
         <label for="inputage">Birthday</label>
-        <input type="text" name="age" class="form-control" id="inputage" placeholder="e.g. 31 July 1980">
+        <input type="text" name="age" class="form-control" id="inputage" value="<%= @current_age %>">
       </div>
 
       <div class="form-group">
         <label for="inputorigin">Origin</label>
-        <input type="text" name="origin" class="form-control" id="inputorigin" placeholder="e.g. Godric's Hollow">
+        <input type="text" name="origin" class="form-control" id="inputorigin" value="<%= @current_origin %>">
       </div>
 
 
@@ -35,7 +34,7 @@
         </div>
 
     <br><br>
-    <button type='submit' class='btn btn-primary'>Create New Character</button>
+    <button type='submit' class='btn btn-primary'>Save Changes</button>
     </form>
 
 

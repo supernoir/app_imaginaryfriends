@@ -59,7 +59,6 @@ post '/create_character' do
   image = params[:image]
   image_name = params[:image_name]
 
-
   Character.create!(first_name: first_name, last_name: last_name, age: age, origin: origin, image: image, image_name: image_name)
 
   erb :new_character
@@ -73,16 +72,46 @@ get '/my_characters' do
 end
 
 get '/view_character/:id' do |id|
-  character_by_id = params[:id].tr(":","")
-  @display_character = Character.or({id: character_by_id})
+  character_by_id = params[:id]
+  @display_character = Character.where({id: character_by_id})
   @title = 'Viewing ' + character_by_id
   erb :view_character
 end
 
-get '/edit_character' do
+get '/edit_character/:id' do |id|
+  id = params[:id]
+  @this_character = id
+
+  character = Character.find(id)
+  @current_firstname = character.first_name
+  @current_lastname = character.last_name
+  @current_origin = character.origin
+  @current_age = character.age
+
   @title = 'Editing #Name'
   erb :edit_character
 end
+
+post '/modify_character/:id' do |id|
+
+  id = params[:id]
+  gender = params[:gender]
+  first_name = params[:first_name]
+  last_name = params[:last_name]
+  age = params[:age]
+  origin = params[:origin]
+#  image = params[:image]
+
+
+  character = Character.find(id)
+  character.update({first_name: first_name, last_name: last_name, age: age, origin: origin})
+
+
+
+  erb :edit_character
+  redirect :my_characters
+end
+
 
 get '/find_character' do
   @title = 'Find a character!'
